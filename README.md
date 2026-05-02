@@ -2,8 +2,8 @@
 
 Vue 3 + Supabase で構築した猫カフェのスタッフ猫管理 CRUD システムです。
 
-🌐 **公開URL**: https://cat-master-eight.vercel.app/
-🔧 **管理画面**: https://cat-master-eight.vercel.app/login
+🌐 **公開URL**: https://cat-master-chi.vercel.app/
+🔧 **管理画面**: https://cat-master-chi.vercel.app/login
 
 
 ## 概要
