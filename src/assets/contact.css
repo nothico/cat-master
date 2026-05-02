@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+.contact-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.contact-wrap h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 80px;
+    background-image: url(/src/assets/images/icon_cat01_60x70.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.contact-form {
+    background-color: #fcf4e3;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.form-row {
+    margin-bottom: 25px;
+}
+
+.form-row label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #603813;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #cc9999;
+    border-radius: 8px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 15px;
+    color: #603813;
+}
+
+.form-row textarea {
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-submit,
+.btn-cancel {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.btn-submit {
+    background-color: #603813;
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.btn-submit:hover,
+.btn-cancel:hover {
+    opacity: 0.7;
+}
+
+.btn-submit:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.success {
+    color: #603813;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.error {
+    color: #d9507a;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.field-error {
+    color: #d9507a;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .contact-wrap {
+        padding: 30px 15px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+    }
+}

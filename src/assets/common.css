@@ -1,0 +1,480 @@
+@charset "utf-8";
+
+/* common.css
+　... ヘッダーやフッターなどのサイト全体で共通となる部分や、
+　複数のページで使用できそうな指定を書いておき、すべてのページに共通で読み込ませる。 */
+
+/* ===========================================
+   ◆ リセットの役割をする記述 
+===========================================*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+
+/* ===========================================
+   ◆ 全体に対する基本指定
+===========================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    /* font-family:
+    "ヒラギノ角ゴ ProN",
+    "Hiragino Kaku Gothic ProN",
+    'メイリオ',
+    'Meiryo',
+      sans-serif;*/
+
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 500;
+    color: #603813;
+    line-height: 1;
+    /*background-image: url(/src/assets/images/cat_background.png);*/
+    background-color: #f0f0f0;
+    /*background-color: rgba(191, 197, 202, 0.3);*/
+}
+
+/* コンテンツ幅の制御2種類 */
+
+.inner-1 {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    /* outline: 1px solid #00f;*/
+}
+
+/* 背景塗分け用class */
+.bg-1 {
+    background-color: #fcf4e3;
+    padding: 15px 0 25px;
+}
+
+/* 横並び用class */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ===========================================
+   ◆ エリアごとの仕上げ
+===========================================*/
+
+/* ---------------------------
+    ヘッダーエリア 
+---------------------------*/
+
+/* ヘッダーまるごとブラウザ上部に固定 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* ロゴ+電話番号,営業時間部分のスタイリング */
+header dl {
+    gap: 9px;
+    align-items: flex-start;
+}
+
+header dl .tel {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 3px;
+}
+
+header dl p {
+    margin-bottom: 8px;
+}
+
+header .head-address {
+    background-color: #cc9999;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.topalign {
+    align-items: flex-start;
+}
+
+/* ナビゲーション部分のスタイリング */
+
+header nav .flex {
+    justify-content: flex-end;
+}
+
+nav ul li {
+    /* width: 150px;
+    line-height: 1.5em;*/
+    text-align: center;
+    padding-right: 25px;
+
+}
+
+nav ul li a {
+    /* display: block;
+    width: 100%;
+    height:100%;
+    background-color: #c7b299;*/
+    color: #603813;
+    font-size: 18px;
+    /* font-weight: bold;*/
+    /* border-radius: 12px;*/
+    transition: opacity 0.3s, color 0.3s;
+    padding-top: 25px;
+}
+
+/* 背景色の変更 */
+nav ul li a:hover {
+    opacity: 0.7;
+    color: #c7b299;
+
+    background-image: url(/src/assets/images/cat_stamp.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+/* ヘッダーを固定することによる滑り込み対処用の記述
+（ヘッダーの後続の要素にこのclass名をつける） */
+.header-br {
+    padding-top: 228px;
+}
+
+/* ---------------------------
+    メインエリア 
+---------------------------*/
+
+main .inner-1 {
+    background-color: #fff;
+}
+
+
+/* ---------------------------
+    フッターエリア 
+---------------------------*/
+
+footer .inner-1 {
+    padding: 15px 30px;
+}
+
+footer .inner-1 {
+    background-color: #fcf4e3;
+}
+
+footer .box-2 {
+    margin-right: 160px;
+    width: 300px;
+}
+
+footer .box-1 a {
+    transition: opacity 0.3s;
+}
+
+footer .box-1 a:hover {
+    opacity: 0.7;
+}
+
+footer .footer-logo {
+    margin-bottom: 30px;
+}
+
+footer .box-2 .contact {
+    padding: 20px 60px;
+    background-image: url(/src/assets/images/icon_cat02_60x60.png);
+    background-repeat: no-repeat;
+}
+
+footer .box-2 a {
+    background-color: #fff;
+    border-radius: 12px;
+    display: block;
+    width: 220px;
+    /*height: 30px;*/
+    line-height: 30px;
+    text-align: center;
+    color: #603813;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer .box-2 a:hover {
+    background-color: #c7b299;
+    color: #fff;
+}
+
+
+/* ゆらゆらさせる */
+.swing {
+    animation: swing 2s ease-in-out infinite;
+}
+
+/* swing */
+@keyframes swing {
+    20% {
+        transform: rotate(15deg)
+    }
+
+    40% {
+        transform: rotate(-10deg)
+    }
+
+    60% {
+        transform: rotate(5deg)
+    }
+
+    80% {
+        transform: rotate(-5deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+
+footer .box-3 {
+    margin-top: 15px;
+    gap: 15px;
+}
+
+footer .box-3 a {
+    transition: opacity 0.3s;
+}
+
+footer .box-3 a:hover {
+    opacity: 0.7;
+}
+
+
+/* コピーライト */
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright small {
+    font-size: 12px;
+}
+
+
+/*フェードアップ*/
+@keyframes fadeUp-move {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* fadeUpアニメを適用する記述 （このクラスが付くとアニメが動く）*/
+.fadeUpActive {
+    animation: fadeUp-move 1s ease forwards;
+}
+
+/* 要素をあらかじめ下にずらして透明にしておく */
+.fadeUp-trigger {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+
+
+
+/* ===========================================
+   ◆ レスポンシブ対応
+===========================================*/
+
+/* ハンバーガーボタン：PC時は非表示 */
+.hamburger {
+    display: none;
+}
+
+/* タブレット（768px以下） */
+@media (max-width: 768px) {
+    .topalign {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-br {
+        padding-top: 80px;
+    }
+
+    .inner-1 {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /*ロゴを小さく*/
+    header h1 img {
+        width: 120px;
+        height: auto;
+    }
+
+
+    /* 電話番号・営業時間を非表示 */
+    .head-address {
+        display: none;
+    }
+
+    /* ロゴとハンバーガーボタンを横並び */
+    .inner-1.flex.topalign {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ハンバーガーボタンを表示 */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    /* 三本線 */
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #603813;
+        border-radius: 3px;
+    }
+
+
+    /* ×になった時 */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-9.5px) rotate(-45deg);
+    }
+
+    .hamburger span {
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+
+    /* ナビメニューをPC時は通常表示 */
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fcf4e3;
+        background-color: rgba(252, 244, 227, 0.85);
+        width: 100%;
+        padding: 20px 0;
+
+        position: absolute;
+        left: 0;
+        top: 100%;
+
+    }
+
+    /* ナビメニューが開いた時 */
+    #nav-menu.open {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    nav ul li a:hover {
+        background-image: none;
+    }
+
+    .header-br {
+        padding-top: 100px;
+    }
+
+    /* フッター */
+    footer .inner-1>.flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    footer .box-1 {
+        order: 3;
+    }
+
+    footer .box-2 {
+        order: 1;
+        margin-right: 0;
+        width: auto;
+        text-align: center;
+    }
+
+    footer .box-3 {
+        order: 2;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    /*お問い合わせはこちらを非表示*/
+    footer .contact {
+        display: none;
+    }
+}
+
+/* スマホ（480px以下） */
+@media (max-width: 480px) {
+
+    header h1 img {
+        width: 160px;
+        height: auto;
+    }
+}

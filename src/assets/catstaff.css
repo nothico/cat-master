@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* catstaff.css
+　... catstaffページ固有の指定を記述し、catstaffページにのみ読み込ませる。 */
+
+/* ===========================================
+   ◆ メインコンテンツ部分
+===========================================*/
+.intro {
+    padding: 30px;
+}
+
+.intro p {
+    padding: 25px;
+}
+
+.intro h2 {
+    padding-left: 80px;
+    background-image: url(/src/assets/images/icon_cat01_60x70.png);
+    background-repeat: no-repeat;
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.staff-cat h2 {
+    padding-left: 80px;
+    background-image: url(/src/assets/images/icon_cat01_60x70.png);
+    background-repeat: no-repeat;
+    height: 70px;
+    /* 例：要素の高さを70pxにする */
+    line-height: 70px;
+    /* テキストの高さを70pxにし、中央に配置 */
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+
+.staff-cat {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* 店長チョコタ */
+.tencho img {
+    width: 35%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 15px;
+}
+
+.tencho p {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* --- 猫カード一覧（grid） --- */
+
+.cat-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+    padding-bottom: 40px;
+}
+
+/* スタッフ猫カード */
+.cat-card {
+    background-color: rgb(204 153 153 / 0.4);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.cat-card img {
+    width: 80%;
+    height: auto;
+}
+
+.cat-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.male {
+    color: #4a90d9;
+}
+
+.female {
+    color: #d9507a;
+}
+
+.cat-desc {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.cat-card img {
+    width: 75%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* タブレット（768px以下） */
+@media (max-width: 768px) {
+    .tencho img {
+        width: 50%;
+    }
+
+    .cat-card img {
+        width: 50%;
+    }
+
+    .cat-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+}
+
+/* スマホ（480px以下） */
+@media (max-width: 480px) {
+    .tencho img {
+        width: 50%;
+    }
+
+    .cat-card img {
+        width: 40%;
+    }
+
+    .cat-list {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tencho p {
+        font-size: 18px;
+    }
+
+    .cat-name {
+        font-size: 16px;
+    }
+}

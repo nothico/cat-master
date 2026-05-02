@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* top.css
+　... トップページ固有の指定を記述し、トップページにのみ読み込ませる。 */
+
+/* ===========================================
+   ◆ メインコンテンツ部分
+===========================================*/
+/*MVスライドショー*/
+#mv-slide img {
+    width: 100%;
+    height: auto;
+}
+
+main .text {
+    background-color: #fcf4e3;
+    padding: 25px;
+}
+
+main .text h2 {
+    padding-left: 80px;
+    background-image: url(/src/assets/images/icon_cat01_60x70.png);
+    background-repeat: no-repeat;
+    height: 70px;
+    /* 例：要素の高さを70pxにする */
+    line-height: 70px;
+    /* テキストの高さを70pxにし、中央に配置 */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main .text .flex {
+    justify-content: flex-start;
+    gap: 1em;
+    padding: 0.5em 0;
+
+}
+
+
+/*↓様々なフェードイン*/
+.fadeIn {
+    animation: fadeIn 0.7s ease 0s 1 normal;
+}
+
+/* fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 0.7s ease 0s 1 normal;
+}
+
+/* fadeInLeft */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeInRight {
+    animation: fadeInRight 0.7s ease 0s 1 normal;
+}
+
+/* fadeInRight */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*↑様々なフェードイン終わり*/
+
+main .text section {
+    width: 45%;
+}
+
+main .text .more {
+    padding-top: 15px;
+    text-align: right;
+}
+
+main .more a {
+    color: #603813;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+main .more a:hover {
+    opacity: 0.7;
+    color: #c7b299;
+}
+
+
+main .text .fee {
+    margin-top: 180px;
+}
+
+main .fee .add-fee {
+    line-height: 2em;
+}
+
+main .drinkmenu {
+    padding: 50px 0 25px;
+}
+
+main .drinkmenu h2 img {
+    display: block;
+    margin: 0 auto;
+}
+
+main .drink img {
+    border: 1px solid #000;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+main .drink .slick-slide {
+    padding: 0 10px;
+}
+
+main .access {
+    padding: 50px 20px 25px;
+}
+
+main .access h2 img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+main .access .flex {
+    padding: 30px;
+}
+
+main .access address {
+    line-height: 2em;
+    margin: 50px 20px;
+}
+
+main .access .tel {
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 8px;
+}
+
+
+/* タブレット（768px以下） */
+@media (max-width: 768px) {
+
+    /* MVスライドショー */
+    #mv-slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    main .text section {
+        width: 100%;
+    }
+
+    /* NEWS・料金を縦並びに */
+    main .text {
+        flex-direction: column;
+    }
+
+    main .text .fee {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    /* アクセスを縦並びに */
+    main .access .flex {
+        flex-direction: column;
+    }
+
+    main .access iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* スマホ（480px以下） */
+@media (max-width: 480px) {
+
+    main .text h2 {
+        font-size: 18px;
+    }
+}
