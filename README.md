@@ -28,7 +28,7 @@ Vue 3 + Supabase で構築した猫カフェのスタッフ猫管理 CRUD シス
 
 | カテゴリ | 技術 |
 |---|---|
-| フロントエンド | Vue 3 (Composition API) / Vue Router |
+| フロントエンド | Vue 3 (Options API) / Vue Router |
 | ビルドツール | Vite |
 | バックエンド・DB | Supabase (Database / Storage) |
 | メール送信 | EmailJS |
