@@ -40,6 +40,12 @@ const router = createRouter({
 router.beforeEach((to) => {
   document.title = to.meta.title || 'CHOCOTA CAFE'
 
+  // ハンバーガーメニューを閉じる
+  if (window.$) {
+    window.$('#hamburger').removeClass('open')
+    window.$('#nav-menu').removeClass('open')
+  }
+
   const isLoggedIn = sessionStorage.getItem('isLoggedIn')
   if (to.path.startsWith('/admin') && !isLoggedIn) {
     return '/login'

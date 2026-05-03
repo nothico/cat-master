@@ -25,6 +25,12 @@ export const useUiEffects = () => {
       $(this).toggleClass('open')
       $('#nav-menu').toggleClass('open')
     })
+
+    // ナビメニューのリンクをクリックしたら閉じる
+    $('#nav-menu a').off('click.navClose').on('click.navClose', function () {
+      $('#hamburger').removeClass('open')
+      $('#nav-menu').removeClass('open')
+    })
   }
 
   return {
